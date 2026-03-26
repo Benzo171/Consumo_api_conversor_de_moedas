@@ -1,0 +1,165 @@
+/* ===== RESET E BASE ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+    min-height: 100vh;
+  background: #0f0f1a;
+  color: #f0f0f8;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px 16px;
+}
+/* ===== CONTAINER PRINCIPAL ===== */
+.app {
+    width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ===== HEADER ===== */
+
+header h1{
+    font-size: 1.8rem;
+  font-weight: 700;
+}
+
+header p {
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* ===== CARD DO CONVERSOR ===== */
+.conversor {
+  background: #1a1a2e;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== CAMPOS (label + input/select) ===== */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo label {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.campo input,
+.campo select {
+  background: #0f0f1a;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  color: #f0f0f8;
+  font-size: 1rem;
+  padding: 12px 14px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: #7fffb2;
+}
+
+/* ===== BOTÕES ===== */
+#btn-inverter {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  color: #888;
+  font-size: 1.1rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  margin-top: 8px;    /* ← espaço acima */
+  margin-bottom: 8px; /* ← espaço abaixo */
+}
+
+#btn-inverter:hover {
+  border-color: #7fffb2;
+  color: #7fffb2;
+}
+
+#btn-converter {
+  background: #7fffb2;
+  border: none;
+  border-radius: 10px;
+  color: #0f0f1a;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 16px;       /* ← mais espaçamento interno */
+  margin-top: 16px;     /* ← espaço acima */
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+  width: 100%;         /* ← ocupa a largura toda */
+  display: block;
+}
+
+#btn-converter:hover {
+  opacity: 0.9;
+}
+
+#btn-converter:active {
+  transform: scale(0.98);
+}
+
+/* ===== CARD DE RESULTADO ===== */
+.resultado {
+  background: #1a1a2e;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instrucao {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.valor-convertido {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7fffb2;
+}
+
+.taxa-info {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 8px;
+}
+
+.erro {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+}
+
+.carregando {
+  color: #888;
+  font-size: 0.9rem;
+}

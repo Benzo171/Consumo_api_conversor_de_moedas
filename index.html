@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotação de Moedas</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="App">
+
+        <header>
+            <h1>💱Cotação de  moedas</h1>
+            <p>Conversão em tempo real </p>
+
+        </header>
+
+     <div class="Conversor">
+        <div class="campo">
+            <label for="valor">Valor</label>
+            <input type="number" id="valor" placeholder="Ex: 100" value="1"`/>
+     </div>   
+     <div class="campo">
+        <label for="moeda-origem">De</label>
+        <select id="moeda-origem">
+            <option value="USD">us USD - Dólar</option>
+            <option value="EUR">eu EUR - Euro</option>
+            <option value="BRL" selected>br BRL - Real</option>
+            <option value="GBP">gb GBP - Libra</option>
+            <option value="ARS">ar ARS - Peso Argetino</option>
+        </select>
+    </div>
+
+    <button id="btn-inverter">⇅ Inverter</button>
+
+    <div class="campo">
+        <label for="moeda-destino">Para</label>
+        <select id="moeda-destino">
+            <option value="USD" selected>🇺🇸 USD — Dólar</option>
+          <option value="EUR">🇪🇺 EUR — Euro</option>
+          <option value="BRL">🇧🇷 BRL — Real</option>
+          <option value="GBP">🇬🇧 GBP — Libra</option>
+          <option value="ARS">🇦🇷 ARS — Peso Argentino</option>
+        </select>
+    </div>
+
+    <button id="btn-converter">Converter</button>
+
+    </div>
+
+    <div class="resultado" id="resultado">
+        <p class="instrução">Preencha os campos e clique em converter.</p>
+    </div>
+
+    </div>
+
+     <script src="app.js"></script>
+</body>
+</html>
